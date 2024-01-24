@@ -27,7 +27,7 @@ jobs:
       - name: Get info
         run: env
       - name: git message
-        run: echo ${{ github.event.workflow_run.head_commit.message }} >> $GITHUB_STEP_SUMMARY
+        run: echo "${{ github.event.workflow_run.head_commit.message }}" >> "$GITHUB_STEP_SUMMARY"
       - name: Clean old files
         run: |
           rm -rf ./DerivedData
